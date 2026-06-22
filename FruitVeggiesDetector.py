@@ -5,7 +5,11 @@ from PIL import Image, ImageTk
 from ultralytics import YOLO
 
 # Load your local model weights
-MODEL_PATH = "trained_fruits_veggies_model.pt"
+# Ada dua jenis, can use either one:
+# 1. trained_fruits_veggies_model.pt
+# 2. best_1.pt (better accuracy patutnya)
+# MODEL_PATH = "trained_fruits_veggies_model.pt"
+MODEL_PATH = "best_1.pt"
 try:
     model = YOLO(MODEL_PATH)
 except Exception as e:
